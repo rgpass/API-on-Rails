@@ -1,0 +1,25 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+
+development:
+  <<: *default
+  database: market_place_api_development
+  host: localhost
+  username: rgpass
+  password: password
+
+test:
+  <<: *default
+  database: market_place_api_test
+  host: localhost
+  username: rgpass
+  password: password
+
+production:
+  <<: *default
+  encoding: unicode
+  database: market_place_api_production
+  pool: 5
+  username: market_place_api
+  password:
