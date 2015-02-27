@@ -1,3 +1,5 @@
+require 'api_constraints'
+
 Rails.application.routes.draw do
   # API Definition
   # See all MIME types accepted by Rails
@@ -7,6 +9,9 @@ Rails.application.routes.draw do
   # http://apionrails.icalialabs.com/book/chapter_two#aside-common_api_patterns
   namespace :api, defaults: { format: :json },
                   constraints: { subdomain: 'api' }, path: '/' do
-    # We list resources here
+
+    scope module: :v1, constraints: ApiConstraints.new(version: 1, default: true) do
+      # We list resources here
+    end
   end
 end
