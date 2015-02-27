@@ -34,4 +34,7 @@ group :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'faker'
+
+  # Better validation tests to integrate with Devise
+  gem 'shoulda-matchers'
 end
