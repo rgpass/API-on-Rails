@@ -1,6 +1,7 @@
 require 'api_constraints'
 
 Rails.application.routes.draw do
+  devise_for :users
   # API Definition
   # See all MIME types accepted by Rails
     # $ rails c

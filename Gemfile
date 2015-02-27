@@ -12,6 +12,9 @@ gem 'jquery-rails'
 ## API Gem -- don't need jbuilder now
 gem 'active_model_serializers'
 
+## Authentication
+gem 'devise'
+
 
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
