@@ -18,4 +18,7 @@ Rails.application.routes.draw do
       resources :sessions, only: [:create, :destroy]
     end
   end
+  # Not sure why, but this is required to get test to pass
+  # although there's already a route that matches this.
+  delete '/signout', to: 'api/v1/sessions#destroy'
 end
